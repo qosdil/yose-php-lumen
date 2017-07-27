@@ -16,6 +16,6 @@ class HomeTest extends TestCase
     public function testShareLink()
     {
         $this->visit('/')
-             ->see('<a href="https://github.com/qosdil/yose-php-lumen#readme">YoseTheGame</a>');
+             ->see('<a id="repository-link" href="https://github.com/qosdil/yose-php-lumen#readme">YoseTheGame</a>');
     }
 }
