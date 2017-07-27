@@ -14,4 +14,10 @@ class PingTest extends TestCase
                 'alive' => true,
              ]);
     }
+
+    public function testPingLink()
+    {
+        $this->visit('/')
+             ->see('<a id="ping-challenge-link" href="'.url('ping').'">Ping</a>');
+    }
 }
