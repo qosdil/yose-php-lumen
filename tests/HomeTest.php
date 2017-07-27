@@ -12,4 +12,10 @@ class HomeTest extends TestCase
         $this->visit('/')
              ->see('Hello Yose');
     }
+
+    public function testShareLink()
+    {
+        $this->visit('/')
+             ->see('<a href="https://github.com/qosdil/yose-php-lumen#readme">YoseTheGame</a>');
+    }
 }
