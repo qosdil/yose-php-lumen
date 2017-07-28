@@ -18,4 +18,10 @@ class HomeTest extends TestCase
         $this->visit('/')
              ->see('<a id="repository-link" href="https://github.com/qosdil/yose-php-lumen#readme">Readme</a>');
     }
+
+    public function testContactInfo()
+    {
+        $this->visit('/')
+             ->see('<a id="contact-me-link"');
+    }
 }
