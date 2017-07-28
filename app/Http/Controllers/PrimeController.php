@@ -10,8 +10,8 @@ class PrimeController extends BaseController
     public function generate(Request $request)
     {
     	$n = $request->number;
-
-    	if (is_int($n) == false) {
+    	
+    	if (is_numeric($n) == false) {
     		$response = [
 		        'number' => $n,
 		        'error' => 'not a number'
