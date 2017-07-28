@@ -11,6 +11,6 @@ Hello Yose, please read our repository here:
 	More about us....
 </div>
 
-<a id="ping-challenge-link" href="https://jellyfish-yose-lumen.herokuapp.com/ping">Ping</a>
+<a id="ping-challenge-link" href="{{ env('APP_URL', 'http://localhost:8000') }}/ping">Ping</a>
 
 Jellyfish

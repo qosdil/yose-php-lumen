@@ -18,6 +18,6 @@ class PingTest extends TestCase
     public function testPingLink()
     {
         $this->visit('/')
-             ->see('<a id="ping-challenge-link" href="'.url('ping').'">Ping</a>');
+             ->see('<a id="ping-challenge-link" href="'.env('APP_URL', 'http://localhost:8000').'/ping">Ping</a>');
     }
 }
