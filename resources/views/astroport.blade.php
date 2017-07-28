@@ -10,3 +10,9 @@
 <div id="gate-3">
 	<div id="ship-3">ship-3</div>
 </div>
+<div id="ship-1">
+	<b>Ship</b> <br/> {{ $name }}
+</div>
+<form method="post">
+Ship <input id="ship" name="ship" type="text"> <button type="submit" id="dock">Dock</button>
+</form>
