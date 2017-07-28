@@ -2,7 +2,13 @@
 	astroport-name
 </div>
 <div id="gate-1">
-	<div id="ship-1">ship-1 {{ $name }}</div>
+	<div id="ship-1">
+		@if(!empty($name))
+		{{ $name }}
+		@else
+		ship-1
+		@endif
+	</div>
 </div>
 <div id="gate-2">
 	<div id="ship-2">ship-2</div>
