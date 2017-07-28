@@ -1,7 +1,11 @@
 <div id="astroport-name">
 	astroport-name
 </div>
-<div id="gate-1">
+@if(!empty($name))
+<div id="gate-1" class="occupied">
+@else
+<div id="gate-1" class="free">
+@endif
 	<div id="ship-1">
 		@if(!empty($name))
 		{{ $name }}
@@ -19,3 +23,21 @@
 <form method="post">
 Ship <input id="ship" name="ship" type="text"> <button type="submit" id="dock">Dock</button>
 </form>
+
+@if(!empty($name))
+<div id="info" class="">
+	This ship has been docked at gate 1
+</div>
+@else
+<div id="info" class="hidden">
+	This ship has been docked at gate 1
+</div>
+@endif
+<style>
+.hidden {
+	display:none;
+}
+.occupied {
+	background: grey;
+}
+</style>
