@@ -10,6 +10,15 @@ class PrimeController extends BaseController
     public function generate(Request $request)
     {
     	$n = $request->number;
+
+    	if (is_int($n) == false) {
+    		$response = [
+		        'number' => $n,
+		        'error' => 'not a number'
+		    ];
+		    return response()->json($response);	
+    	}
+
     	$bits = array_reverse(str_split(decbin($n)));
 	    $output = array();
 	    foreach($bits as $key => $bit) {
